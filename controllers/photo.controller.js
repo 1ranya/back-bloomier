@@ -14,7 +14,7 @@ exports.create = (req, res) => {
     likes: req.body.likes
   };
 
-  // Save Tutorial in the database
+  // Save Photo in the database
   Photo.create(photo)
     .then(data => {
       res.send(data);
@@ -27,7 +27,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all Tutorials from the database.
+// Retrieve all Photos from the database.
 exports.findAll = async(req, res) => {
   Photo.findAll({})
   .then(data => {
@@ -41,47 +41,50 @@ exports.findAll = async(req, res) => {
   });
 };
 
-// Find a single Tutorial with an id
+// Find a single Photo with an id
 exports.findOne = (req, res) => {
-  
+  Photo.findByPk(req.params.id)
+  .then(data => {
+    res.status(200).send(data)
+  })
+  .catch(e => res.send(e))
 };
 
-// Update a Tutorial by the id in the request
 exports.update = (req, res) => {
   const id = req.params.id;
 
   Photo.update(req.body, {
-    where: {id:id}
+    where: { id: id }
   })
-  .then(res => {
-    if(res == 1) {
-      res.send({
-        message: "Tutorial was updated successfully."
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Photo was updated successfully."
+        });
+      } else {
+        res.send({
+          message: `Cannot update Photo with id=${id}. Maybe Photo was not found or req.body is empty!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error updating Photo with id=" + id
       });
-    } else {
-      res.send({
-        message: `Cannot update Tutorial with id=${id}. Maybe Tutorial was not found or req.body is empty!`
-      });
-    }
-  })
-  .catch(err => {
-    res.status(500).send({
-      message: "Error updating Tutorial with id=" + id
     });
-  });
-}
+};
 
-// Delete a Tutorial with the specified id in the request
+// Delete a Photo with the specified id in the request
 exports.delete = (req, res) => {
   
 };
 
-// Delete all Tutorials from the database.
+// Delete all Photo from the database.
 exports.deleteAll = (req, res) => {
   
 };
 
-// Find all published Tutorials
+// Find all published Photos
 exports.findAllPublished = (req, res) => {
   
 };

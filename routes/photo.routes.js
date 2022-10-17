@@ -3,26 +3,24 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
+    // Create a new Photo
     router.post("/", photos.create);
   
-    // Retrieve all Tutorials
+    // Retrieve all Photos
     router.get("/", photos.findAll);
   
-    // // Retrieve all published Tutorials
-    // router.get("/published", tutorials.findAllPublished);
+    // Retrieve all published Photos
+    // router.get("/published", Photos.findAllPublished);
   
-    // // Retrieve a single Tutorial with id
-    // router.get("/:id", tutorials.findOne);
+    router.get("/:id", photos.findOne);
   
-    // Update a photo with id
     router.put("/:id", photos.update);
   
-    // // Delete a Tutorial with id
-    // router.delete("/:id", tutorials.delete);
+    // Delete a Photo with id
+    // router.delete("/:id", Photos.delete);
   
-    // // Create a new Tutorial
-    // router.delete("/", tutorials.deleteAll);
+    // Create a new Photo
+    // router.delete("/", Photos.deleteAll);
   
     app.use('/api/photos', router);
   };
