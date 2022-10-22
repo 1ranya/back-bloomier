@@ -5,10 +5,12 @@ module.exports = {
     // DB: "bloomier-db",
     // dialect: "postgres",
     HOST: process.env.HOST,
+    PORT: process.env.PORT,
     USER:process.env.USER,
     PASSWORD: process.env.PASSWORD,
     DB: process.env.DB,
-    dialect: process.env.DIALECT,
+    DB_URL: process.env.DB_URL,
+    dialect: 'postgres',
     pool: {
       max: 5,
       min: 0,
