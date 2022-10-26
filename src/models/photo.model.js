@@ -15,12 +15,12 @@ module.exports = (sequelize, Sequelize) => {
       category: { // Gallery or Photography
         type: Sequelize.STRING
       },
-      createdat: {
+      createdAt: {
         // allowNull: false,
         defaultValue: new Date(),
         type: Sequelize.DATE
       },
-      updatedat: {
+      updatedAt: {
         // allowNull: false,
         defaultValue: new Date(),
         type: Sequelize.DATE
