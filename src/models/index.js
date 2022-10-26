@@ -4,8 +4,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, dbConfig.DB_URL,
     {
         host: dbConfig.HOST,
-        dialect: 'postgres',
-        define: dbConfig.define,
+        dialect: dbConfig.dialect,
         pool: {
             max: dbConfig.pool.max,
             min: dbConfig.pool.min,
