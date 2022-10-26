@@ -14,12 +14,12 @@ module.exports = {
       "createdAt": "createdat",
       "updatedAt": "updatedat"
     },
-    HOST: "dpg-cd9resarrk09hiokut1g-a",
-    USER: "admin",
-    PASSWORD: "eho1Sq9drePuYae5QZBdzKat1FZs3FKr",
-    DB: "bloomier_db",
-    dialect: 'postgres',
-    DB_URL: "postgres://admin:eho1Sq9drePuYae5QZBdzKat1FZs3FKr@dpg-cd9resarrk09hiokut1g-a.frankfurt-postgres.render.com/bloomier_db",
+    HOST: process.env.HOST,
+    USER: process.env.USER,
+    PASSWORD: process.env.PASSWORD,
+    DB: process.env.DB,
+    dialect: process.env.DIALECT,
+    DB_URL: process.env.DB_URL,
 
     pool: {
       max: 5,
