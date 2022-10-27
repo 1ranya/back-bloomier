@@ -6,10 +6,10 @@ const db = require('./src/models')
 const app = express();
 
 var corsOptions = {
-    origin: *
+    origin: ['*']
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
