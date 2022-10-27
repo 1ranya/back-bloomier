@@ -6,7 +6,7 @@ const db = require('./src/models')
 const app = express();
 
 var corsOptions = {
-    origin: ['http://localhost:3000', 'https://bloomier-service.onrender.com', 'https://bloomier-service.onrender.com/api', 'https://bloomier-service.onrender.com/api/photos' ],
+    origin: *
 };
 
 app.use(cors(corsOptions));
