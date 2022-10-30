@@ -9,7 +9,7 @@ module.exports = {
     DB: process.env.DB,
     dialect: process.env.DIALECT,
     DB_URL: process.env.DB_URL,
-
+    acquireConnectionTimeout: 5000,
     pool: {
         min: 0,
         max: 10,
