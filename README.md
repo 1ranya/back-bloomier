@@ -8,5 +8,8 @@ Express\
 Sequelize (ORM)\
 PostgresSQL (database)
 
+## HOST
+Bloomier fontend, backend et database are deployed on [https://render.com](https://render.com)
+
 ## Start porject
-node .\server.js
+npm run start 
