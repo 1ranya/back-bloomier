@@ -12,7 +12,12 @@ PostgresSQL (database)
 Bloomier fontend, backend et database are deployed on [https://render.com](https://render.com)
 
 ## Start porject
-Create a .env file to define your local variables.
+Create a `.env` file to define your local variables.
 
-npm run start 
+### `npm install`
 
+Install node packages listed in the package.json file
+
+### `npm run start`
+
+To run the node server
