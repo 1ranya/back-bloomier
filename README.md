@@ -1,6 +1,6 @@
 # Bloomier website
 
-Bloomier is a professional website to expose photography art work.
+Bloomier is a personnal portfolio website to expose Art and photography work.
 
 ## Back stack
 Node js\
@@ -12,4 +12,7 @@ PostgresSQL (database)
 Bloomier fontend, backend et database are deployed on [https://render.com](https://render.com)
 
 ## Start porject
+Create a .env file to define your local variables.
+
 npm run start 
+
