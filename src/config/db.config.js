@@ -11,9 +11,12 @@ module.exports = {
     DB_URL: process.env.DB_URL,
 
     pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000000000
+        min: 0,
+        max: 10,
+        createTimeoutMillis: 8000,
+        acquireTimeoutMillis: 8000,
+        idleTimeoutMillis: 8000,
+        reapIntervalMillis: 1000,
+        createRetryIntervalMillis: 100,
     }
   };
