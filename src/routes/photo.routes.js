@@ -17,7 +17,7 @@ module.exports = app => {
     router.put("/:id", photos.update);
   
     // Delete a Photo with id
-    // router.delete("/:id", Photos.delete);
+    router.delete("/:id", photos.delete);
   
     // Create a new Photo
     // router.delete("/", Photos.deleteAll);
