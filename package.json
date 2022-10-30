@@ -4,7 +4,7 @@
   "description": "Node.js Rest apis built with Express , Squelize and PostgresSQL",
   "main": "server.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && node server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
