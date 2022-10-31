@@ -7,8 +7,6 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD,
         dialect: "postgres",
         "define": {
             timestamps: false,
-            // createdAt: "createdat",
-            // updatedAt: "updatedat"
         },
         pool: {
             max: dbConfig.pool.max,
