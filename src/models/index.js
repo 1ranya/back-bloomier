@@ -8,7 +8,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD,
         "define": {
             timestamps: false
         },
-        port: 5423,
+        port: 5432,
         idleTimeoutMillis: 0,
         connectionTimeoutMillis: 0,
     }
