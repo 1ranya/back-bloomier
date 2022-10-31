@@ -7,7 +7,10 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD,
         dialect: "postgres",
         "define": {
             timestamps: false
-        }  
+        },
+        port: 5423,
+        idleTimeoutMillis: 0,
+        connectionTimeoutMillis: 0,
     }
 )
 
